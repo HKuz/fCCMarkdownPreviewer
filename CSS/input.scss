@@ -1,0 +1,46 @@
+// Sass preprocessor
+// Variables
+// Color palette source: http://www.colourlovers.com/palette/1389950/teal_brocade
+$dark-brown: #6B5D4D;
+$teal: #429398;
+$cream: #FBEED3;
+$white: #FFFFFF;
+
+$font-stack: "Helvetica Neue", Arial, sans-serif;
+
+body {
+  font-family: $font-stack;
+  background-color: $cream;
+}
+
+#main {
+  font-size: 3em;
+  color: $dark-brown;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 40px;
+  border-top: 2px solid $teal;
+}
+
+.header {
+  color: $dark-brown;
+  border-bottom: 2px solid $teal;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#react-container {
+  padding-bottom: 20px;
+  border-bottom: 2px solid $teal;
+}
+
+textarea {
+  min-height: 400px;
+  overflow: scroll;
+}
+
+.codeOut {
+  background-color: $white;
+  padding: 0px 10px 5px;
+  min-height: 400px;
+}
