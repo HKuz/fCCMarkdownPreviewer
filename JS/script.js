@@ -1,5 +1,3 @@
-// Babel preprocessor to use JSX
-
 var CodeInput = React.createClass({
   handleChange: function() {
     this.props.onUserInput(
