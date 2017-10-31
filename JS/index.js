@@ -1,3 +1,11 @@
+// require('../CSS/bootstrap.min.css');
+require('../CSS/input.scss');
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+
+// TODO: Update React code
 var CodeInput = React.createClass({
   handleChange: function() {
     this.props.onUserInput(
@@ -64,7 +72,7 @@ var Previewer = React.createClass({
   }
 });
 
-React.render(<Previewer />, document.getElementById("react-container"));
+ReactDOM.render(<Previewer />, document.getElementById("react-container"));
 
 /* TEST MARKDOWN CODE
 Heading
@@ -101,3 +109,5 @@ Spain.
 
  *[Herman Fassett](https://freecodecamp.com/hermanfassett)*
 */
+
+
