@@ -25,17 +25,6 @@ const config = {
             loader: 'sass-loader' // compiles Sass to CSS
           }
         ]
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          }
-        ]
       }
     ]
   }
