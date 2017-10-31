@@ -3,7 +3,7 @@ var path = require('path');
 const config = {
   entry: './JS/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './JS'),
     filename: 'bundle.js'
   },
   module: {
@@ -16,19 +16,26 @@ const config = {
         test: /\.scss$/,
         use: [
           {
-            loader: "style-loader" // creates style nodes from JS strings
+            loader: 'style-loader' // creates style nodes from JS strings
           },
           {
-            loader: "css-loader" // translates CSS into CommonJS
+            loader: 'css-loader' // translates CSS into CommonJS
           },
           {
-            loader: "sass-loader" // compiles Sass to CSS
+            loader: 'sass-loader' // compiles Sass to CSS
           }
         ]
       },
       {
         test: /\.css$/,
-        use: 'style-loader!css-loader'
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
       }
     ]
   }
