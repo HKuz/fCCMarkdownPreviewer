@@ -1,78 +1,7 @@
-// require('../CSS/bootstrap.min.css');
 require('../CSS/input.scss');
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-
-// TODO: Update React code
-/*
-var CodeInput = React.createClass({
-  handleChange: function() {
-    this.props.onUserInput(
-      this.refs.codeTextInput.value
-    );
-  },
-  render: function() {
-    return(
-      <div className="col-sm-6 col-xs-12">
-        <h4 className="header">Input Your Markdown Code:</h4>
-        <textarea className="form-control"
-          value={this.props.codeText}
-          ref="codeTextInput"
-          onChange={this.handleChange}
-        />
-      </div>
-    );
-  }
-});
-
-
-var CodeOutput = React.createClass({
-  render: function() {
-    return (
-      <div className="col-sm-6 col-xs-12">
-        <h4 className="header">Code Preview:</h4>
-        <div
-          className="codeOut text-left"
-          dangerouslySetInnerHTML={{__html: this.props.markedOut}}
-        />
-      </div>
-    );
-  }
-});
-
-
-var Previewer = React.createClass({
-  getInitialState: function() {
-    return {
-      codeText: "",
-      markedOut: ""
-    };
-  },
-  handleInput: function(codeText) {
-    var markedHTML = marked(codeText, {sanitize: true});
-    //console.log(markedHTML);
-    this.setState({
-      codeText: codeText,
-      markedOut: markedHTML
-    });
-  },
-  render: function(){
-    return (
-      <div className="row text-center">
-        <CodeInput
-          codeText={this.state.codeText}
-          onUserInput={this.handleInput}
-        />
-        <CodeOutput
-          markedOut={this.state.markedOut}
-        />
-      </div>
-    );
-  }
-});
-*/
 
 
 class CodeInput extends React.Component {
@@ -91,7 +20,7 @@ class CodeInput extends React.Component {
   render() {
     return (
       <div className="col-sm-6 col-xs-12">
-        <h4 className="header">Input Your Markdown Code:</h4>
+        <h2 className="header">Input Your Markdown Code:</h2>
         <textarea className="form-control"
           value={this.props.codeText}
           ref="codeTextInput"
@@ -111,7 +40,7 @@ class CodeOutput extends React.Component {
   render() {
     return (
       <div className="col-sm-6 col-xs-12">
-        <h4 className="header">Code Preview:</h4>
+        <h2 className="header">Code Preview:</h2>
         <div
           className="codeOut text-left"
           dangerouslySetInnerHTML={{__html: this.props.markedOut}}
@@ -158,7 +87,10 @@ class App extends React.Component {
 };
 
 
-ReactDOM.render(<App />, document.getElementById("react-container"));
+ReactDOM.render(
+  <App />,
+  document.getElementById("react-container")
+);
 
 /*
 TEST MARKDOWN CODE:
